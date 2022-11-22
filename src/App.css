@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+body {
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wrapper {
+    margin: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form_guess {
+    display: flex;
+    flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.form_guess input[type="text"] {
+    width: 200px;
+    height: 60px;
+    font-size: 18px;
+
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.form_guess input[type="submit"] {
+    width: 208px;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: white;
+
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form_guess input[type="submit"]:disabled {cursor: not-allowed;}
+
+
+.guessed {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    width: min-content;
+    height: 60px;
+    padding: 0px 10px;
+    size: 18px;
+}
+
+.wrapper_input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 60vh;
+}
+
+.guessed li {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.error, .duplicate, .noLetter {
+    color: red;
+}
+
+.word {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    /*border: 1px solid black;*/
+    width: min-content;
+    height: 60px;
+    padding: 0px 10px;
+}
+
+.word li {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 30px;
+    padding: 2px;
+}
+
+.disabled {
+    display: none;
 }
